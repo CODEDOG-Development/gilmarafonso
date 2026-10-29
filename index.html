@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gilmar Afonso Company Store — vestuário premium com identidade e estilo.">
+  <title>Gilmar Afonso | Company Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Gilmar Afonso - início">
+      <span class="brand-mark">≋</span><span class="brand-copy"><strong>GILMAR AFONSO</strong><small>COMPANY STORE</small></span>
+    </a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menu">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#inicio">Início</a><a href="#categorias">Produtos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Pesquisar">⌕</button>
+      <button class="icon-btn cart-trigger" id="openCart" aria-label="Abrir carrinho">🛒<span id="cartCount">0</span></button>
+      <button class="btn btn-gold btn-small" id="openAuth">Entrar</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">ESTILO QUE IMPRESSIONA</p>
+        <h1>VESTUÁRIO<br>DE QUALIDADE<br><span>PARA O SEU DIA A DIA</span></h1>
+        <p class="hero-description">Camisas, moletons e peças exclusivas<br class="desktop-only"> com conforto, design e durabilidade.</p>
+        <a class="btn btn-gold" href="#destaques">VER PRODUTOS <span>→</span></a>
+      </div>
+      <div class="hero-model" role="img" aria-label="Modelo vestindo camiseta preta premium"></div>
+    </section>
+
+    <section class="benefits" aria-label="Benefícios">
+      <div><span class="benefit-icon">♧</span><p>Entrega para<br>todo o Brasil</p></div>
+      <div><span class="benefit-icon">◇</span><p>Compra segura<br>e garantida</p></div>
+      <div><span class="benefit-icon">▤</span><p>Parcelamento<br>em até 12x</p></div>
+      <div><span class="benefit-icon">♧</span><p>Atendimento<br>especializado</p></div>
+    </section>
+
+    <section class="categories section-light" id="categorias">
+      <div class="section-heading">
+        <p class="eyebrow">NOSSAS CATEGORIAS</p><h2>Escolha o seu estilo</h2>
+      </div>
+      <div class="category-grid">
+        <button class="category-card" data-category="Camisetas"><img src="assets/camiseta-cinza.jpeg" alt="Camiseta cinza"><span>CAMISETAS <b>→</b></span></button>
+        <button class="category-card" data-category="Polos"><img src="assets/polo-bordo.jpeg" alt="Polo bordô"><span>POLOS <b>→</b></span></button>
+        <button class="category-card" data-category="Camisas Sociais"><img src="assets/camisa-social-branca.jpeg" alt="Camisa social branca"><span>CAMISAS SOCIAIS <b>→</b></span></button>
+        <button class="category-card" data-category="Todos"><img src="assets/camiseta-verde-militar.jpeg" alt="Camiseta verde militar"><span>VER COLEÇÃO <b>→</b></span></button>
+      </div>
+    </section>
+
+    <section class="featured section-dark" id="destaques">
+      <div class="section-heading heading-row"><div><p class="eyebrow">PRODUTOS EM DESTAQUE</p><h2>Mais vendidos</h2></div><a href="#categorias" class="text-link">Ver todos →</a></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="brand-story" id="sobre">
+      <div class="story-image" role="img" aria-label="Detalhe de etiqueta premium em tecido preto"></div>
+      <div class="story-content"><p class="eyebrow">QUALIDADE EM CADA DETALHE</p><h2>Peças que<br>representam<br>quem você é</h2><p>Design moderno, materiais de alta qualidade e acabamento premium.</p><a href="#categorias" class="btn btn-gold">CONHEÇA NOSSOS PRODUTOS <span>→</span></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="footer-brand"><a class="brand" href="#inicio"><span class="brand-mark">≋</span><span class="brand-copy"><strong>GILMAR AFONSO</strong><small>COMPANY STORE</small></span></a><p>Vestuário com identidade, qualidade<br>e estilo para todas as ocasiões.</p><div class="socials"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="TikTok">♪</a></div></div>
+    <div><h3>Links rápidos</h3><a href="#inicio">Início</a><a href="#categorias">Produtos</a><a href="#sobre">Sobre</a><a href="#contato">Trocas e Devoluções</a><a href="mailto:contato@gilmarafonso.com.br">Contato</a></div>
+    <div class="newsletter"><h3>Receba novidades</h3><p>Cadastre seu e-mail e fique por dentro dos lançamentos e promoções.</p><form id="newsletterForm"><input type="email" placeholder="Seu melhor e-mail" required aria-label="Seu e-mail"><button aria-label="Cadastrar e-mail">→</button></form><small id="newsletterMessage"></small></div>
+  </footer>
+  <div class="copyright">© <span id="year"></span> Gilmar Afonso Company Store. Todos os direitos reservados.</div>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de compras" aria-hidden="true">
+    <div class="drawer-header"><div><p class="eyebrow">SUA SELEÇÃO</p><h2>Carrinho</h2></div><button class="close-btn" data-close aria-label="Fechar">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom"><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div><p class="muted">Frete calculado na etapa de checkout.</p><button class="btn btn-gold btn-full" id="checkoutBtn">IR PARA O CHECKOUT →</button><button class="btn btn-outline btn-full" data-close>CONTINUAR COMPRANDO</button></div>
+  </aside>
+
+  <div class="modal" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button class="close-btn modal-close" data-close aria-label="Fechar">×</button>
+    <p class="eyebrow">ÁREA DO CLIENTE</p><h2 id="authTitle">Bem-vindo de volta</h2><p class="muted" id="authSubtitle">Entre para acompanhar seus pedidos.</p>
+    <div class="auth-tabs"><button class="active" data-auth-tab="login">Entrar</button><button data-auth-tab="register">Criar conta</button></div>
+    <form id="authForm">
+      <label id="nameField" class="hidden">Nome completo<input id="authName" type="text" autocomplete="name" placeholder="Seu nome"></label>
+      <label>E-mail<input id="authEmail" type="email" required autocomplete="email" placeholder="voce@email.com"></label>
+      <label>Senha<input id="authPassword" type="password" required minlength="6" autocomplete="current-password" placeholder="Mínimo de 6 caracteres"></label>
+      <button class="btn btn-gold btn-full" id="authSubmit">ENTRAR</button><p class="form-message" id="authMessage"></p>
+    </form>
+    <p class="tiny-note">Demonstração local: a conta é salva apenas neste navegador. Para produção, use autenticação segura no servidor.</p>
+  </div>
+
+  <div class="modal checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <button class="close-btn modal-close" data-close aria-label="Fechar">×</button>
+    <p class="eyebrow">FINALIZE SUA COMPRA</p><h2 id="checkoutTitle">Checkout</h2>
+    <div class="checkout-layout">
+      <form id="checkoutForm" class="checkout-form">
+        <h3>1. Dados de contato</h3>
+        <div class="form-row"><label>Nome completo<input name="name" required autocomplete="name"></label><label>E-mail<input name="email" type="email" required autocomplete="email"></label></div>
+        <h3>2. Entrega</h3>
+        <label>CEP<input name="cep" id="cep" required inputmode="numeric" maxlength="9" placeholder="00000-000"></label>
+        <div class="form-row"><label>Rua / Avenida<input name="street" required autocomplete="street-address"></label><label>Número<input name="number" required></label></div>
+        <div class="form-row"><label>Bairro<input name="district" required></label><label>Cidade<input name="city" required></label></div>
+        <div class="form-row"><label>Estado<input name="state" required maxlength="2" placeholder="MG"></label><label>Complemento<input name="complement" placeholder="Opcional"></label></div>
+        <h3>3. Forma de pagamento</h3>
+        <div class="payment-options"><label><input type="radio" name="payment" value="pix" checked> Pix <small>5% de desconto demonstrativo</small></label><label><input type="radio" name="payment" value="card"> Cartão de crédito <small>Até 12x (simulação)</small></label><label><input type="radio" name="payment" value="boleto"> Boleto bancário</label></div>
+        <div id="cardFields" class="hidden"><label>Nome impresso no cartão<input name="cardName" autocomplete="cc-name"></label><label>Número do cartão<input name="cardNumber" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000" maxlength="19"></label><div class="form-row"><label>Validade<input name="expiry" placeholder="MM/AA" maxlength="5" autocomplete="cc-exp"></label><label>CVV<input name="cvv" inputmode="numeric" maxlength="4" autocomplete="cc-csc"></label></div><p class="tiny-note">Não informe dados reais. Este protótipo não processa pagamentos.</p></div>
+        <button class="btn btn-gold btn-full" type="submit">CONFIRMAR PEDIDO →</button>
+        <p class="form-message" id="checkoutMessage"></p>
+      </form>
+      <aside class="order-summary"><h3>Resumo do pedido</h3><div id="checkoutItems"></div><div class="summary-line"><span>Subtotal</span><strong id="checkoutSubtotal">R$ 0,00</strong></div><div class="summary-line"><span>Frete</span><strong id="shippingValue">R$ 19,90</strong></div><div class="summary-line" id="discountLine"><span>Desconto Pix</span><strong id="discountValue">− R$ 0,00</strong></div><div class="summary-line total-line"><span>Total</span><strong id="checkoutTotal">R$ 0,00</strong></div></aside>
+    </div>
+  </div>
+
+  <div class="modal success-modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle"><div class="success-mark">✓</div><p class="eyebrow">PEDIDO REGISTRADO</p><h2 id="successTitle">Obrigado pela compra!</h2><p id="successText">Seu pedido de demonstração foi criado.</p><p class="tiny-note">Nenhuma cobrança foi realizada. Integre um gateway de pagamento para vender de verdade.</p><button class="btn btn-gold btn-full" data-close>VOLTAR À LOJA</button></div>
+
+  <div class="search-bar hidden" id="searchBar"><input id="searchInput" type="search" placeholder="Buscar produtos..." aria-label="Buscar produtos"><button id="searchClose" aria-label="Fechar busca">×</button></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
